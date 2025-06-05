@@ -117,7 +117,7 @@ function App() {
 
         <div className="right">
           <div className={"price " + (transaction.price<0 ? 'red' :'green')}>{transaction.price}</div>
-          <div className="datetime">{transaction.datetime}</div>
+         <div className="datetime">{transaction.datetime.replace(/\.\d{3}Z$/, '').replace('T', ' ')}</div>
         </div>
       </div>
 
